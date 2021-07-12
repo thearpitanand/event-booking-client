@@ -1,0 +1,18 @@
+/* Google Font ( Montserrat ) */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;900&display=swap");
+
+/* Color Theme */
+:root {
+  --main-bg-color: #ecf0f3;
+  --main-text-color: #555;
+  --main-primary-color: #51C4D3;
+  --main-secondary-color: #24cfaa;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  color: var(--main-text-color);
+  background: var(--main-bg-color);
+}
