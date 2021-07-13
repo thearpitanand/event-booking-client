@@ -94,8 +94,6 @@ const AuthPage = () => {
           <i className="fas fa-user authenticate-form__svg"></i>
           <input
             type="email"
-            name=""
-            id=""
             className="authenticate-form__email-input"
             placeholder="Enter your Email"
             value={email}

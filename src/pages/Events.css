@@ -1,0 +1,102 @@
+.events__main-div {
+  width: 70%;
+  margin: auto;
+}
+.events__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+.events__header h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.events__header__button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 5px 15px;
+  text-decoration: none;
+  color: azure;
+  background: var(--main-text-color);
+  border-radius: 10px;
+  padding: 5px 15px;
+  margin: 0;
+  font-size: 1.03rem;
+}
+
+.events__header__button:active,
+.events__header__button:hover {
+  color: var(--main-text-color);
+  border: 2px solid var(--main-text-color);
+  background: transparent;
+}
+
+.events__break-line {
+  border-top: 2px double var(--main-text-color);
+  margin: 0 3px;
+}
+
+.events__content-list {
+  padding: 0;
+  margin-left: 5px;
+}
+
+.events__event {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.events__event-heading {
+  width: 30%;
+}
+
+.events__event-description {
+  width: 50%;
+  margin: 0 10px;
+}
+
+.events__event-price {
+  width: 20%;
+}
+
+.events__event-book-button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 150px;
+  height: 30px;
+  border-radius: 20px;
+  font-size: 1rem;
+  color: #ffffff;
+  text-align: center;
+  background: var(--main-secondary-color);
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+  transition: 0.5s;
+}
+
+.Modal__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.Model__form--Input {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1rem;
+  color: #555;
+  padding: 20px 10px 20px 5px;
+}
+
+@media screen and (max-width: 700px) {
+  .events__main-div {
+    width: 100%;
+    margin: auto;
+  }
+  .events__content-list {
+    margin-left: 0;
+  }
+}
