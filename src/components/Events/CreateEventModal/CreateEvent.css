@@ -1,0 +1,13 @@
+.Modal__form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Model__form--Input {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1rem;
+    color: #555;
+    padding: 20px 10px 20px 5px;
+  }

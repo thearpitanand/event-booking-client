@@ -1,5 +1,3 @@
-import React, { useContext } from "react";
-
 // Env
 const { REACT_APP_API } = process.env;
 
@@ -54,7 +52,6 @@ export const createEvent = (props) => {
         mutation {
             createEvent(eventInput:{title:"${title}",description:"${description}",price:${+price},date:"${date}"}) {
               _id
-              title
             }
           }`,
   };

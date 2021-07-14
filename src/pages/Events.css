@@ -43,55 +43,7 @@
   margin-left: 5px;
 }
 
-.events__event {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.events__event-heading {
-  width: 30%;
-}
-
-.events__event-description {
-  width: 50%;
-  margin: 0 10px;
-}
-
-.events__event-price {
-  width: 20%;
-}
-
-.events__event-book-button {
-  outline: none;
-  border: none;
-  cursor: pointer;
-  width: 150px;
-  height: 30px;
-  border-radius: 20px;
-  font-size: 1rem;
-  color: #ffffff;
-  text-align: center;
-  background: var(--main-secondary-color);
-  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
-  transition: 0.5s;
-}
-
-.Modal__form {
-  display: flex;
-  flex-direction: column;
-}
-
-.Model__form--Input {
-  border: none;
-  outline: none;
-  background: none;
-  font-size: 1rem;
-  color: #555;
-  padding: 20px 10px 20px 5px;
-}
-
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 760px) {
   .events__main-div {
     width: 100%;
     margin: auto;
