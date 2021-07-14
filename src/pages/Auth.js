@@ -9,6 +9,7 @@ import AuthContext from "../context/auth-context";
 // Toastify
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { toastInfo } from "./helper/eventsHelper";
 toast.configure();
 
 // Env
@@ -25,15 +26,7 @@ const AuthPage = () => {
     event.preventDefault();
     let requestBody;
     if (email.trim().length === 0 && password.trim().length === 0) {
-      return toast("Invalid Password or Invalid Email", {
-        position: "bottom-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: false,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      return toast("Invalid Password or Invalid Email", toastInfo);
     }
     // Sending req to backend
     if (!isLogin) {
@@ -61,7 +54,7 @@ const AuthPage = () => {
       };
     }
 
-    fetch( REACT_APP_API, {
+    fetch(REACT_APP_API, {
       method: "Post",
       body: JSON.stringify(requestBody),
       headers: {
@@ -75,10 +68,21 @@ const AuthPage = () => {
         return res.json();
       })
       .then((resData) => {
-        console.log(resData);
-        if (resData.data.login.token) {
+        // console.log(resData);
+        if (!!resData.errors) {
+          return resData.errors.map((error) => {
+            return toast(`${error.message}`, toastInfo);
+          });
+        }
+        if (!!resData.data?.login?.token) {
           const { userId, tokenExpiration, token } = resData.data.login;
-          authenticationContext.login(userId, tokenExpiration, token);
+          return authenticationContext.login(userId, tokenExpiration, token);
+        }
+        if (!!resData.data?.createUser?._id) {
+          return toast(
+            `You have successfully created an account "${resData.data.createUser.email}"`,
+            toastInfo
+          );
         }
       })
       .catch((err) => console.log(err));
