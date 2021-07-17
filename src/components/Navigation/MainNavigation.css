@@ -60,6 +60,7 @@
   margin: 0;
   font-size: 1.03rem;
   background: transparent;
+  cursor: pointer;
 }
 
 .main-navigation__items button:hover,

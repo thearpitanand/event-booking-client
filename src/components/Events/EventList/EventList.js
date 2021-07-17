@@ -1,5 +1,4 @@
 import React from "react";
-import Modal from "../../Modal/Modal";
 import EventModal from "../EventModal/EventModal";
 import EventItem from "./EventItem/EventItem";
 

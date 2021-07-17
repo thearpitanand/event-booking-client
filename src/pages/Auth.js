@@ -10,10 +10,8 @@ import AuthContext from "../context/auth-context";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { toastInfo } from "./helper/eventsHelper";
+import { authentication } from "./helper/authHelper";
 toast.configure();
-
-// Env
-const { REACT_APP_API } = process.env;
 
 const AuthPage = () => {
   const [email, setEmail] = useState("");
@@ -24,51 +22,11 @@ const AuthPage = () => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    let requestBody;
     if (email.trim().length === 0 && password.trim().length === 0) {
       return toast("Invalid Password or Invalid Email", toastInfo);
     }
-    // Sending req to backend
-    if (!isLogin) {
-      requestBody = {
-        query: `
-        mutation {
-          createUser(userInput: {email: "${email}", password: "${password}"}) {
-            _id
-            email
-          }
-        }
-        `,
-      };
-    } else {
-      requestBody = {
-        query: `
-        query{
-          login(email: "${email}", password: "${password}") {
-            userId
-            token
-            tokenExpiration
-          }
-        }
-        `,
-      };
-    }
-
-    fetch(REACT_APP_API, {
-      method: "Post",
-      body: JSON.stringify(requestBody),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((res) => {
-        if (res.status !== 200 && res.status !== 201) {
-          throw new Error("Failed!");
-        }
-        return res.json();
-      })
+    authentication({ email, password, isLogin })
       .then((resData) => {
-        // console.log(resData);
         if (!!resData.errors) {
           return resData.errors.map((error) => {
             return toast(`${error.message}`, toastInfo);

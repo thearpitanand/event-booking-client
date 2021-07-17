@@ -1,0 +1,34 @@
+.bookings__main-div {
+  width: 70%;
+  margin: auto;
+}
+.bookings__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+.bookings__header h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.bookings__break-line {
+  border-top: 2px double var(--main-text-color);
+  margin: 0 3px;
+}
+
+.bookings__content-list {
+  padding: 0;
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 900px) {
+  .bookings__main-div {
+    width: 100%;
+    margin: auto;
+  }
+  .bookings__content-list {
+    margin-left: 0;
+  }
+}

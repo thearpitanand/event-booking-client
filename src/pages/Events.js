@@ -15,7 +15,6 @@ import {
 } from "./helper/eventsHelper";
 
 // Component
-import Modal from "../components/Modal/Modal";
 import { toast } from "react-toastify";
 import Loading from "../components/Loading/Loading";
 import EventList from "../components/Events/EventList/EventList";
@@ -58,7 +57,6 @@ const EventsPage = () => {
         }
       })
       .catch((error) => {
-        console.log(error);
         console.log("Unable to book event");
       });
   };

@@ -49,11 +49,17 @@ export const createEvent = (props) => {
   const { title, description, price, date, token } = props;
   let requestBody = {
     query: `
-        mutation {
-            createEvent(eventInput:{title:"${title}",description:"${description}",price:${+price},date:"${date}"}) {
+        mutation createEvent(title: String!, $description: String!, $price: Float!, $date: String!) {
+            createEvent(eventInput:{ title: $title, description: $description, price: $price, date: $date }) {
               _id
             }
           }`,
+    variables: {
+      title,
+      description,
+      price: +price,
+      date,
+    },
   };
   return fetch(REACT_APP_API, {
     method: "Post",
@@ -76,14 +82,17 @@ export const bookEventHelper = (props) => {
   const { eventId, token } = props;
   let requestBody = {
     query: `
-        mutation {
-            bookEvent(eventId:"${eventId}"){
+        mutation bookEvent( $eventId : ID! ){
+            bookEvent( eventId: $eventId ){
             _id
             event {
                 title
               }
             }
         }`,
+    variables: {
+      eventId: eventId,
+    },
   };
   return fetch(REACT_APP_API, {
     method: "Post",
