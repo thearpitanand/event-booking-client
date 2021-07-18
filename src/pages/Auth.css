@@ -23,7 +23,7 @@
   box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
 }
 .authenticate-form__logo {
-  background: url("https://i.pinimg.com/736x/42/f4/c6/42f4c6c1a4f877ee401e3ed0aa9fd89e.jpg");
+  background: url("../assets/images/E.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100px;

@@ -1,70 +1,124 @@
-# Getting Started with Create React App
+<h1>Eventing - Event Management Web Application - Server</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br />
 
-## Available Scripts
+<!-- PROJECT LOGO -->
+<p  align="center">
+    <a href="#">
+        <img src="public/assets/images/E.png" alt="Logo" width="200" height="200">
+    </a>
+</p>
 
-In the project directory, you can run:
+<!-- ABOUT THE PROJECT -->
 
-### `yarn start`
+## About The Project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Eventing ( Event Management Website ) is the application of project management to the creation and development of small and/or large-scale personal or corporate events such as festivals, conferences, ceremonies, weddings, formal parties, concerts, or conventions.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<!-- Screenshot -->
+<!-- <div align="center">
+    <img src="public/assets/Website_Screenshot/screenshot_website_01.png" ></img>
+</div> -->
 
-### `yarn test`
+![Website Screenshot](public/assets/Website_Screenshot/screenshot_website_01.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[Eventing (Link)](https://event-management-graphql.netlify.app/)
 
-### `yarn build`
+<!-- Built with section -->
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Built With
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Frameworks
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [React - Javascript](https://reactjs.org/)
 
-### `yarn eject`
+### Add-Ons/Plugins:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- [react-toastify](https://www.npmjs.com/package/react-toastify)
+- [react-router-dom](https://www.npmjs.com/package/react-router-dom)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<!-- GETTING STARTED -->
+# Getting Started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+This project is bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Prerequisites
 
-## Learn More
+You will need a node in your system.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- npm
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  ```sh
+  npm install npm@latest -g
+  ```
 
-### Code Splitting
+- Verify Installation
+  ```sh
+  node -v
+  ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Installation
 
-### Analyzing the Bundle Size
+1. Clone the Front-End repo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   ```sh
+   git clone https://github.com/thearpitanand/event-booking-client
+   ```
 
-### Making a Progressive Web App
+2. Clone the Back-End repo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   ```sh
+   git clone https://github.com/thearpitanand/event-booking-server
+   ```
 
-### Advanced Configuration
+3. Install NPM packages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+   ```sh
+   yarn install
+   ```
 
-### Deployment
+4. Create `.env` file then enter your API.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+   ```sh
+   REACT_APP_API="YOUR BACKEND - API LINK"
+   ```
 
-### `yarn build` fails to minify
+5. Run the app in the development mode.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   ```sh
+   yarn start
+   ```
+
+6. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+<!-- Test Details -->
+
+## Test Details
+
+### User Id, Password
+
+- ID
+  ```sh
+  test.user@eventing.com
+  ```
+- Password
+  ```sh
+  eventing
+  ```
+
+<!-- Disclaimer -->
+
+## DISCLAIMER
+
+Your suggestions are highly acknowledged. [Open issue](https://github.com/thearpitanand/event-booking-client/issues)
+
+<!-- CONTACT -->
+
+## Contact
+
+Name - Arpit Anand\
+Unsplash - [@thearpitanand](https://unsplash.com/@thearpitanand)\
+Twitter - [the_arpitanand](https://twitter.com/the_arpitanand)\
+LinkedIn - [thearpitanand](https://www.linkedin.com/in/thearpitanand/)\
+Instagram - [anand_arpit](https://www.instagram.com/anand_arpit/)\
+Project Link: [Front - End](https://github.com/thearpitanand/event-booking-client), [Back - End](https://github.com/thearpitanand/event-booking-server)
