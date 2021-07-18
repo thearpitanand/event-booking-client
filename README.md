@@ -1,4 +1,4 @@
-<h1>Eventing - Event Management Web Application - Server</h1>
+<h1>Eventing - Event Management Web Application - Client</h1>
 
 <br />
 
@@ -16,9 +16,6 @@
 Eventing ( Event Management Website ) is the application of project management to the creation and development of small and/or large-scale personal or corporate events such as festivals, conferences, ceremonies, weddings, formal parties, concerts, or conventions.
 
 <!-- Screenshot -->
-<!-- <div align="center">
-    <img src="public/assets/Website_Screenshot/screenshot_website_01.png" ></img>
-</div> -->
 
 ![Website Screenshot](public/assets/Website_Screenshot/screenshot_website_01.png)
 
@@ -74,7 +71,7 @@ You will need a node in your system.
 3. Install NPM packages
 
    ```sh
-   yarn install
+   yarn i
    ```
 
 4. Create `.env` file then enter your API.
