@@ -43,15 +43,14 @@ This project is bootstrapped with [Create React App](https://github.com/facebook
 
 You will need a node in your system.
 
-- npm
-
+- yarn
   ```sh
-  npm install npm@latest -g
+  npm install --global yarn
   ```
 
 - Verify Installation
   ```sh
-  node -v
+  yarn -v
   ```
 
 ### Installation
